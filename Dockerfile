@@ -1,3 +1,3 @@
 FROM jupyter/scipy-notebook
 
-RUN pip install git+https://github.com/lucasiscovici/study-project.git
+RUN pip install git+https://github.com/studyproject-mlds/study-project.git
