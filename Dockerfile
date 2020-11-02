@@ -14,6 +14,7 @@ RUN pip install git+https://github.com/studyproject-mlds/study-project.git
 WORKDIR /home/$NB_USER_CUSTOM/work
 
 RUN study-project init
+RUN pip install jupyter_contrib_nbextensions && jupyter contrib nbextension install --user
 
 RUN pip install jupyter_nbextensions_configurator
 
