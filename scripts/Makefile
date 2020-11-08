@@ -24,3 +24,7 @@ install:
 	jupyter-nbextension install tmpfiles/execution_dependencies2 --user
 	jupyter nbextension enable execution_dependencies2/execution_dependencies --user
 	rm -rf tmpfiles
+	pip install nbdime --user
+	jupyter nbextension install --py nbdime --user
+	jupyter nbextension enable --py nbdime --user
+	jupyter serverextension enable --py nbdime --user
