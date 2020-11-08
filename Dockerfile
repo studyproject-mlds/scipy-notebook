@@ -29,10 +29,10 @@ RUN echo 'alias sudo="sudo -s PATH=\$PATH"' >> /home/$NB_USER/.bashrc
 
 USER $NB_USER
 
-RUN pip install git+https://github.com/studyproject-mlds/study-project.git
+RUN pip install git+https://github.com/studyproject-mlds/study-project.git #redo
 
 COPY scripts/Makefile .
-RUN make install
+RUN make install #redo
 RUN rm -rf Makefile
 
 RUN sed -i -r "s/^# (c.NotebookApp.allow_password_change = True)$/\1/" /home/jovyan/.jupyter/jupyter_notebook_config.py
